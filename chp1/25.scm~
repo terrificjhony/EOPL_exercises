@@ -1,0 +1,8 @@
+;;; a little modification to 24.scm
+(define (every? pred lst)
+  (if (null? lst)
+      #f
+      (if (pred (car lst))
+	  #t
+	  (exist? pred (cdr lst)))))
+(exist? number? '(2 3 4 a))

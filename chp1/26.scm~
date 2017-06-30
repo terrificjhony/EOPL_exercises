@@ -1,0 +1,14 @@
+(define (up lst)
+  (if (null? lst)
+      '()
+      (if (atom? (car lst))
+	  (cons (car lst) (up (cdr lst)))
+	  (cons
+	   (let ((tmp (car lst)))
+	     (define (recombine x)
+	       (if (null? (cdr x))
+		   x
+		   (cons (car x) (cdr x))))
+	     (recombine tmp))
+	   (up (cdr lst))))))
+	   

@@ -1,0 +1,6 @@
+(define (list-index pred lst)
+  (if (null? lst)
+      #f
+      (if (pred (car lst))
+	  0
+	  (+ 1 list-index pred (cdr lst)))))

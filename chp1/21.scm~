@@ -1,0 +1,10 @@
+(define (product sos1 sos2)
+  (cond ((or (null? sos1) (null? sos2))
+	 '())
+	((symbol? sos1)
+	 (cons sos1 (product sos1 (cdr sos2))))
+	(else
+	 (cons (product (car sos1) sos2)
+	       (product (cdr sos1) sos2)))))
+(display (product '(a b c) '(e f)))
+	 

@@ -1,0 +1,6 @@
+(define (list-set lst n x)
+  (if (null? lst)
+      '()
+      (if (zero? n)
+	  (cons x (cdr lst))
+	  (list-set lst (- n 1) x))))

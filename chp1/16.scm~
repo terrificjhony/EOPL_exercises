@@ -1,0 +1,4 @@
+(define (invert lst)
+  (if (null? lst)
+      '()
+      (cons (car (car lst)) (cdr (car lst)))))

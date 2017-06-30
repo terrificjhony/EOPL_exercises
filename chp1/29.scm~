@@ -1,0 +1,13 @@
+(define (sort loi)
+  (define (search x y)
+    (if (null? y)
+	(list x)
+	(if (<= x (car y))
+	    (cons (x y))
+	    (cons (car y) (search x (cdr y))))))
+
+  (if (null? loi)
+      '()
+      (search (car loi) (sort (cdr loi)))))
+
+  

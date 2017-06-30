@@ -1,0 +1,9 @@
+(define (double-tree tree)
+  (cond ((null? tree)
+	 '())
+	((leaf? tree)
+	 (* 2 tree))
+	(else
+	 (cons (double-tree (lson tree))
+	       (double-tree (rson tree))))))
+	 

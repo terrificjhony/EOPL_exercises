@@ -1,0 +1,4 @@
+(define (duple n x)
+  (if (= 0 n)
+      '()
+      (cons x (duple ((- n 1) x)))))
